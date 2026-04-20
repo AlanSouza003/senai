@@ -1,0 +1,33 @@
+algoritmo "Desconto"
+var
+   preco, desc: real
+inicio
+   // Lendo o valor do produto
+   escreva("Digite o preço do produto: R$")
+   leia(preco)
+
+   escreval("O valor do produto é R$",preco)
+
+   // Estrutura condicional para aplicar o desconto.
+   se (preco <= 100) entao
+      desc <- preco - (5 * preco / 100)
+      escreval("DESCONTO DE 5% APLICADO ")
+      escreva("O PRODUTO PASSA A CUSTAR R$",desc:4:2)
+   senao
+      se (preco <= 500) entao
+         desc <- preco - (10 * preco / 100)
+         escreval("DESCONTO DE 10% APLICADO ")
+         escreva("O PRODUTO PASSA A CUSTAR R$",desc:4:2)
+      senao
+         se (preco <= 1000) entao
+            desc <- preco - (15 * preco / 100)
+            escreval("DESCONTO DE 15% APLICADO ")
+            escreva("O PRODUTO PASSA A CUSTAR R$",desc:4:2)
+         senao
+            desc <- preco - (20 * preco / 100)
+            escreval("DESCONTO DE 20% APLICADO ")
+            escreva("O PRODUTO PASSA A CUSTAR R$",desc:4:2)
+         fimse
+      fimse
+   fimse
+fimalgoritmo

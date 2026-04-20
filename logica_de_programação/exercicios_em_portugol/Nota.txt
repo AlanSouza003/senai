@@ -1,0 +1,31 @@
+algoritmo "Nota"
+var
+   nota: inteiro
+inicio
+   // Lendo a nota do aluno
+   escreva("Digite sua nota: ")
+   leia(nota)
+   escreval()
+
+   escreval("Sua nota foi um: ",nota)
+   escreval()
+
+   // Estrutura condicional para classificar a nota com letra
+   se (nota >= 9) entao
+      escreva("VOCÊ RECEBEU UM: A")
+   senao
+      se (nota >= 8.0) entao
+         escreva("VOCÊ RECEBEU UM: B")
+      senao
+         se (nota >= 7.0) entao
+            escreva("VOCÊ RECEBEU UM: C")
+         senao
+            se (nota >= 5.0) entao
+               escreva("VOCÊ RECEBEU UM: D")
+            senao
+               escreva("VOCÊ RECEBEU UM: F")
+            fimse
+         fimse
+      fimse
+   fimse
+fimalgoritmo

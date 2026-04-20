@@ -1,0 +1,25 @@
+algoritmo "Saldo"
+var
+   saldo: real
+inicio
+   // Lendo o saldo do usuário
+   escreva("Digite seu saldo: R$")
+   leia(saldo)
+
+   escreval("Seu saldo é de R$",saldo)
+
+   // Estrutura condicional para classificar o saldo.
+   se (saldo < 0) entao
+      escreva("SALDO: NEGATIVO")
+   senao
+      se (saldo < 1000) entao
+         escreva("SALDO: BAIXO")
+      senao
+         se (saldo < 5000) entao
+            escreva("SALDO: REGULAR")
+         senao
+            escreva("SALDO: ALTO")
+         fimse
+      fimse
+   fimse
+fimalgoritmo

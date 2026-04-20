@@ -1,0 +1,34 @@
+algoritmo "SistemaAcademico"
+var
+   media: real
+   falta: inteiro
+inicio
+   // Lendo a média e as faltas do aluno
+   escreva("Digite sua média: ")
+   leia(media)
+   escreva("Quantidade de faltas: ")
+   leia(falta)
+
+   escreval("Sua média foi: ",media)
+   escreval("E teve ", falta," faltas.")
+
+   // Estrutura condicional para mostra se o aluno repovou pela nota
+   // ou por faltas, se esta em recuperação, ou se foi aprovado.
+   se (media < 6) e (falta > 25) entao
+      escreva("REPROVADO POR NOTA E FALTAS.")
+   senao
+      se (media < 6) entao
+         escreva("REPROVADO POR NOTA!")
+      senao
+         se (falta > 25) entao
+            escreva("REPROVADO POR FALTAS!")
+         senao
+            se (media <= 8.9) entao
+               escreva("APROVADO!")
+            senao
+                 escreva("APROVADO POR MÉRITO")
+            fimse
+         fimse
+      fimse
+   fimse
+fimalgoritmo

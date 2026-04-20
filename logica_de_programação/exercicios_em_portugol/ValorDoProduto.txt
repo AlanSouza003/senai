@@ -1,0 +1,25 @@
+algoritmo "ValorDoProduto"
+var
+   valor: real
+inicio
+      // Lendo o valor do produto
+      escreva("Digite o valor do produto: R$")
+      leia(valor)
+      
+      escreval("O valor do produto é R$",valor)
+      
+      // Estrutura condicional para difinir a classificação do produto.
+      se (valor < 200) entao
+         escreva("PRODUTO: ECONÔMICO")
+      senao
+           se (valor < 1000) entao
+              escreva("PRODUTO: INTERMEDIÁRIO")
+           senao
+                se (valor < 5000) entao
+                   escreva("PRODUTO: PREMIUM")
+                senao
+                     escreva("PRODUTO: LUXO")
+                fimse
+           fimse
+      fimse
+fimalgoritmo

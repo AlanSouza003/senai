@@ -1,0 +1,35 @@
+algoritmo "Placar"
+var
+   time1, time2, quantgo1, quantgo2: inteiro
+inicio
+   // Titulo
+   escreval("==== Vitória x Bahia ====")
+   escreval()
+
+   // Lendo os gols dos times
+   escreva("Quantos gols o Vitória fez?")
+   leia(time1)
+   escreva("Quantos gols o Bahia fez?")
+   leia(time2)
+   quantgo1 <- time1 - time2
+   quantgo2 <- time2 - time1
+   escreval()
+   escreval("O Vitória fez ", time1," gols")
+   escreval("O Bahia fez ", time2," gols")
+   escreval()
+   // Estrutura condicional para verificar o vencedor da partida
+   se (time1 > time2) entao
+      escreval("O Vencedor foi o Vitória!! PEGA LEÃO!")
+   senao
+      se (time2 > time1) entao
+         escreval("O vencedor foi o sardinha!")
+      senao
+         escreval("EMPATE.")
+      fimse
+   fimse
+   se (quantgo1 >= 3) ou (quantgo2 >= 3) entao
+      escreva("GOLEADA")
+   senao
+      escreva("EQUILIBRADO")
+   fimse
+fimalgoritmo

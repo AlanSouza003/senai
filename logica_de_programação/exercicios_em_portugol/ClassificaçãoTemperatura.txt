@@ -1,0 +1,29 @@
+algoritmo "Temperatura"
+var
+   cidade: caractere
+   temp: inteiro
+inicio
+      // Lendo a cidade
+      escreva("Digite sua cidade: ")
+      leia(cidade)
+      
+      // Lendo a temperatura
+      escreva("Quantos graus? ")
+      
+      escreval("Na sua cidade ", cidade," esta fazendo ", temp, "º")
+      
+      // Estrutura condicional para classificar a temperatura digitada
+      se (temp < 10) entao
+         escreva("TEMPERATURA: MUITO FRIA!")
+      senao
+           se (temp < 24) entao
+              escreva("TEMPERATURA: AGRADÁVEL!")
+           senao
+                se (temp < 34) entao
+                   escreva("TEMPERATURA: QUENTE!")
+                senao
+                     escreva("TEMPERATURA: MUITO QUENTE!")
+                fimse
+           fimse
+      fimse
+fimalgoritmo

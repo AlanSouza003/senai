@@ -1,0 +1,30 @@
+algoritmo "SistemaSenhas"
+var
+   criar_s: inteiro
+   senha: inteiro
+inicio
+      // Pedindo ao usuário para criar uma senha
+      escreva("Crie uma senha: ")
+      leia(criar_s)
+      
+      // Repetindo a senha criada.
+      escreva("Digite sua senha: ")
+      leia(senha)
+      
+      se (criar_s <> senha) entao
+         escreva("SENHA INCORRETA!")
+      senao
+           se (senha = 1234) entao
+              escreva("SENHA PADRÃO")
+           senao
+                se (senha = 102030) entao
+                   escreva("SENHA ADMINISTRATIVA")
+                senao
+                     se (senha = 88557581) entao
+                        escreva("SENHA MESTRA")
+                     fimse
+                fimse
+           fimse
+      fimse
+      
+fimalgoritmo

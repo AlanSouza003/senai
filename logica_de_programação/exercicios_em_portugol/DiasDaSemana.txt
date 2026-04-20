@@ -1,0 +1,46 @@
+algoritmo "DiasDaSemana"
+var
+   opcao: inteiro
+inicio
+   // Mostrando a tabela dos dias da semana.
+   escreval("[ 1 ] DOMINGO")
+   escreval("[ 2 ] SEGUNDA")
+   escreval("[ 3 ] TERÇA")
+   escreval("[ 4 ] QUARTA")
+   escreval("[ 5 ] QUINTA")
+   escreval("[ 6 ] SEXTA")
+   escreval("[ 7 ] SABADO")
+   escreva("Digite sua opção: ")
+   leia(opcao)
+
+   // Estrutura condicional para mostra na tela os dias.
+   se (opcao > 7) entao
+      escreva("OPÇÃO INVALIDA!")
+   senao
+      se (opcao = 1) entao
+         escreva("O DIA DA SEMANA É: DOMINGO")
+      senao
+         se (opcao = 2) entao
+            escreva("O DIA DA SEMANA É: SEGUNDA")
+         senao
+            se (opcao = 3) entao
+               escreva("O DIA DA SEMANA É: TERÇA")
+            senao
+               se (opcao = 4) entao
+                  escreva("O DIA DA SEMANA É: QUARTA")
+               senao
+                  se (opcao = 5) entao
+                     escreva("O DIA DA SEMANA É: QUINTA")
+                  senao
+                     se (opcao = 6) entao
+                        escreva("O DIA DA SEMANA É: SEXTA")
+                     senao
+                          escreva("O DIA DA SEMANA É: SÁBADO")
+                     fimse
+                  fimse
+               fimse
+            fimse
+         fimse
+      fimse
+   fimse
+fimalgoritmo

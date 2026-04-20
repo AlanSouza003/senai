@@ -1,0 +1,25 @@
+algoritmo "ClassificaçãoRisco"
+var
+   pont: inteiro
+inicio
+   // Lendo a pontuação
+   escreva("Digite a pontuação: ")
+   leia(pont)
+
+   escreval("SUA PONTUAÇÃO FOI DE: ",pont)
+
+   //Estrutura condicional para classificar o risco.
+   se (pont >= 81) entao
+      escreva("CLASSIFICAÇÃO: BAIXO RISCO")
+   senao
+      se (pont >= 51) entao
+         escreva("CLASSIFICAÇÃO: MÉDIO RISCO")
+      senao
+         se (pont >= 21)entao
+            escreva("CLASSIFICAÇÃO: ALTO RISCO")
+         senao
+            escreva("CLASSIFICAÇÃO: CRITICO")
+         fimse
+      fimse
+   fimse
+fimalgoritmo

@@ -1,0 +1,32 @@
+algoritmo "CalculoIMC"
+var
+   p, a, imc: real
+   nome: caractere
+inicio
+   // Lendo o nome do usuário
+   escreva("Digite seu nome: ")
+   leia(nome)
+
+   // Lendo altura e o peso do usuário
+   escreva("Digite sua altura: ")
+   leia(a)
+   escreva("Digite seu peso: ")
+   leia(p)
+   imc <- p / (a*a)
+   escreval(nome, " seu IMC é: ", imc:4:2)
+
+   // Estrutura condicional para definir a classificação do IMC
+   se (imc < 18.5) entao
+      escreva("ABAIXO DO PESO.")
+   senao
+        se (imc >= 20) entao
+           escreva("PESO NORMAL.")
+        senao
+             se (imc >= 30) entao
+                escreva("SOBREPESO.")
+             senao
+                  escreva("OBESIDADE.")
+             fimse
+        fimse
+   fimse
+fimalgoritmo

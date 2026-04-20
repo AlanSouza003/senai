@@ -1,0 +1,28 @@
+algoritmo "ClassificaçãoPorIdade"
+var
+   idade: inteiro
+   nome: caractere
+inicio
+      // Lendo o nome do usuário
+      escreva("Digite seu nome: ")
+      leia(nome)
+      
+      // Lendo a idade do usuário
+      escreva("Digite sua idade: ")
+      leia(idade)
+      
+      se (idade <= 12) entao
+         escreval(nome," você é uma criança!")
+      senao
+           se (idade <= 17) entao
+              escreval(nome," você é um adolescente!")
+           senao
+                se (idade <= 59) entao
+                   escreval(nome," você é um adulto!")
+                senao
+                     escreval(nome," você é um idoso!")
+                fimse
+           fimse
+      fimse
+      
+fimalgoritmo

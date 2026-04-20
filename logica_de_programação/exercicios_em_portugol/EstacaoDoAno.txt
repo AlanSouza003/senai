@@ -1,0 +1,27 @@
+algoritmo "EstacaoDoAno"
+var
+   mes: caractere
+inicio
+   // Lendo o mês
+   escreva("Digite o mês: ")
+   leia(mes)
+
+   mes <- maiusc(mes)
+
+   escreval("O mês escolhido foi: ", mes)
+   // Estrutura condicional para mostrar a estação de acordo
+   // com o mês digitado
+   se (mes = "JANEIRO") ou (mes = "FEVEREIRO") ou (mes = "DEZEMBRO") entao
+      escreva("ESTAÇÃO: VERÃO")
+   senao
+      se (mes = "MARÇO") ou (mes = "ABRIL") ou (mes = "MAIO") entao
+         escreva("ESTAÇÃO: OUTONO")
+      senao
+         se (mes = "JUNHO") ou (mes = "JULHO") ou (mes = "AGOSTO") entao
+            escreva("ESTAÇÃO: INVERNO")
+         senao
+            escreva("ESTAÇÃO: PRIMAVERA")
+         fimse
+      fimse
+   fimse
+fimalgoritmo

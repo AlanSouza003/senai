@@ -1,0 +1,20 @@
+algoritmo "Numeros"
+var
+   n: real
+inicio
+
+      // Lendo o número
+      escreva("Digite um número: ")
+      leia(n)
+      // Estrutura condicinal para definir a classe do valor
+      se (n <> int(n)) entao
+         escreva("NUMERO INVALIDO")
+      senao
+           se (n > 0) entao
+                escreva("POSITIVO")
+           senao
+                escreva("NEGATIVO")
+           fimse
+      fimse
+fimalgoritmo
+

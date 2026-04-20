@@ -1,0 +1,20 @@
+algoritmo "Turno"
+var
+   horario: inteiro
+inicio
+
+      // Lendo o horario
+      escreva("Digite o horario: ")
+      leia(horario)
+      
+      // Estrutura condicional para verificar os turnos
+      se (horario < 12) entao
+         escreva("TURNO: MANHÃ")
+      senao
+           se (horario < 17) entao
+              escreva("TURNO: TARDE")
+           senao
+                escreva("TURNO: NOITE")
+           fimse
+      fimse
+fimalgoritmo

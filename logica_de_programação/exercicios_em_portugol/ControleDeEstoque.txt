@@ -1,0 +1,191 @@
+algoritmo "ControleDeEstoque"
+var
+   vmd, emin, emax, tr, lr, ea: inteiro
+   m1, m2, m3, m4, m5, m6, m7, m8, m9, m10, m11, m12, m13, m14, m15, m16: inteiro
+   vmd2, vmd3, vmd4, tr2, tr3, tr4, emin2, emin3, emin4: inteiro
+   lr2, lr3, lr4, emax2, emax3, emax4, ea2, ea3, ea4: inteiro
+   prodA, prodB, prodC, prodD, c, nc: caractere
+inicio
+      // Titulo
+      escreval("                    ------------------")
+      escreval("                    |  CONTROLE DE   |")
+      escreval("                    |    ESTOQUE     |")
+      escreval("                    ------------------")
+      // Lendo os produtos
+      escreva("PRIMEIRO PRODUTO: ")
+      leia(prodA)
+      escreva("SEGUNDO PRODUTO: ")
+      leia(prodB)
+      escreva("TERCEIRO PRODUTO: ")
+      leia(prodC)
+      escreva("QUARTO PRODUTO: ")
+      leia(prodD)
+      escreval("------------------")
+      escreval("|  VENDA MÉDIA   |")
+      escreval("|     DIÁRIA     |")
+      escreval("------------------")
+      // Lendo os valores dos produtos
+      escreval("PRODUTO 1: ",prodA)
+      escreva("PRIMEIRO MÊS: ")
+      leia(m1)
+      escreva("SEGUNDO MÊS: ")
+      leia(m2)
+      escreva("TERCEIRO MÊS: ")
+      leia(m3)
+      escreva("QUARTO MÊS: ")
+      leia(m4)
+      vmd <- ((m1 + m2 + m3 + m4)\4)\25
+      escreval("------------------")
+      escreval("PRODUTO 2: ",prodB)
+      escreva("PRIMEIRO MÊS: ")
+      leia(m5)
+      escreva("SEGUNDO MÊS: ")
+      leia(m6)
+      escreva("TERCEIRO MÊS: ")
+      leia(m7)
+      escreva("QUARTO MÊS: ")
+      leia(m8)
+      vmd2 <- ((m5 + m6 + m7 + m8)\4)\25
+      escreval("------------------")
+      escreval("PRODUTO 3: ",prodC)
+      escreva("PRIMEIRO MÊS: ")
+      leia(m9)
+      escreva("SEGUNDO MÊS: ")
+      leia(m10)
+      escreva("TERCEIRO MÊS: ")
+      leia(m11)
+      escreva("QUARTO MÊS: ")
+      leia(m12)
+      vmd3 <- ((m9 + m10 + m11 + m12)\4)\25
+      escreval("------------------")
+      escreval("PRODUTO 4: ",prodD)
+      escreva("PRIMEIRO MÊS: ")
+      leia(m13)
+      escreva("SEGUNDO MÊS: ")
+      leia(m14)
+      escreva("TERCEIRO MÊS: ")
+      leia(m15)
+      escreva("QUARTO MÊS: ")
+      leia(m16)
+      vmd4 <- ((m13 + m14 + m15 + m16)\4)\25
+      // Tabela
+      escreval("--------------------------------------------------")
+      escreval("ITENS      | MÊS 1 | MÊS 2 | MÊS 3 | MÊS 4 | VMD ")
+      escreval("--------------------------------------------------")
+      escreval(prodA:10," |",m1:6," |",m2:6," |",m3:6," |",m4:6," |",vmd)
+      escreval(prodB:10," |",m5:6," |",m6:6," |",m7:6," |",m8:6," |",vmd2)
+      escreval(prodC:10," |",m9:6," |",m10:6," |",m11:6," |",m12:6," |",vmd3)
+      escreval(prodD:10," |",m13:6," |",m14:6," |",m15:6," |",m16:6," |",vmd4)
+      // Analisando o estoque mínimo
+      escreval("------------------")
+      escreval("| ESTOQUE MÍNIMO |")
+      escreval("------------------")
+      // Lendo o tempo de reposição
+      escreval("REPOSIÇÃO DO PRODUTO: ",prodA)
+      escreva("TEMPO: ")
+      leia(tr)
+      escreval("REPOSIÇÃO DO PRODUTO: ",prodB)
+      escreva("TEMPO: ")
+      leia(tr2)
+      escreval("REPOSIÇÃO DO PRODUTO: ",prodC)
+      escreva("TEMPO: ")
+      leia(tr3)
+      escreval("REPOSIÇÃO DO PRODUTO: ",prodD)
+      escreva("TEMPO: ")
+      leia(tr4)
+      // Calculando o estoque mínimo
+      emin  <- tr  * vmd
+      emin2 <- tr2 * vmd2
+      emin3 <- tr3 * vmd3
+      emin4 <- tr4 * vmd4
+      // Tabela
+      escreval("-----------------------")
+      escreval("ITENS      | TR | EMIN ")
+      escreval("-----------------------")
+      escreval(prodA:10," |",tr:3," |",emin)
+      escreval(prodB:10," |",tr2:3," |",emin2)
+      escreval(prodC:10," |",tr3:3," |",emin3)
+      escreval(prodD:10," |",tr4:3," |",emin4)
+      // Estoque máximo
+      escreval("------------------")
+      escreval("| ESTOQUE MÁXIMO |")
+      escreval("------------------")
+      // Pedindo a quantidade do produto
+      escreval("QUANTAS CAIXAS VOCÊ QUER DE ",prodA)
+      escreva("QUANT: ")
+      leia(lr)
+      escreval("QUANTAS CAIXAS VOCÊ QUER DE ",prodB)
+      escreva("QUANT: ")
+      leia(lr2)
+      escreval("QUANTAS CAIXAS VOCÊ QUER DE ",prodC)
+      escreva("QUANT: ")
+      leia(lr3)
+      escreval("QUANTAS CAIXAS VOCÊ QUER DE ",prodD)
+      escreva("QUANT: ")
+      leia(lr4)
+      // Fazendo o calculo do estoque
+      emax  <- lr  + emin
+      emax2 <- lr2 + emin2
+      emax3 <- lr3 + emin3
+      emax4 <- lr4 + emin4
+      escreval("-----------------------")
+      escreval("ITENS      | TR | EMAX ")
+      escreval("-----------------------")
+      escreval(prodA:10," |",lr:3," |",emax)
+      escreval(prodB:10," |",lr2:3," |",emax2)
+      escreval(prodC:10," |",lr3:3," |",emax3)
+      escreval(prodD:10," |",lr4:3," |",emax4)
+      // Tomada de Decisão
+      escreval("------------------")
+      escreval("|    TOMADA DE    |")
+      escreval("|     DECISÃO     |")
+      escreval("------------------")
+      escreval("QUAL O ESTOQUE ATUAL DO ", prodA)
+      escreva("QUANT: ")
+      leia(ea)
+      escreval("QUAL O ESTOQUE ATUAL DO ", prodB)
+      escreva("QUANT: ")
+      leia(ea2)
+      escreval("QUAL O ESTOQUE ATUAL DO ", prodC)
+      escreva("QUANT: ")
+      leia(ea3)
+      escreval("QUAL O ESTOQUE ATUAL DO ", prodD)
+      escreva("QUANT: ")
+      leia(ea4)
+      // Estrutura condicional para comprar ou não comprar
+      c  <- "COMPRAR"
+      nc <- "NÃO COMPRAR"
+      
+      escreval("---------------------------------")
+      escreval("ITENS      |  EA  | COMPRAR OU   ")
+      escreval("                    NÃO COMPRAR  ")
+      escreval("---------------------------------")
+      
+      // Decisão Produto 1
+      se (ea > emin) entao
+         escreval(prodA:10," |",ea:5," |",nc)
+      senao
+         escreval(prodA:10," |",ea:5," |",c)
+      fimse
+      
+      // Decisão Produto 2
+      se (ea2 > emin2) entao
+         escreval(prodB:10," |",ea2:5," |",nc)
+      senao
+         escreval(prodB:10," |",ea2:5," |",c)
+      fimse
+      
+      // Decisão Produto 3
+      se (ea3 > emin3) entao
+         escreval(prodC:10," |",ea3:5," |",nc)
+      senao
+         escreval(prodC:10," |",ea3:5," |",c)
+      fimse
+      
+      // Decisão Produto 4
+      se (ea4 > emin4) entao
+         escreval(prodD:10," |",ea4:5," |",nc)
+      senao
+         escreval(prodD:10," |",ea4:5," |",c)
+      fimse
+fimalgoritmo

@@ -1,0 +1,34 @@
+algoritmo "CategoriaVeiculo"
+var
+   rodas: inteiro
+   motorizada: caractere
+inicio
+   // Lendo a quantidade de rodas
+   escreva("Quantas rodas? ")
+   leia(rodas)
+
+   escreval("Seu veiculo tem ", rodas," rodas.")
+
+   // Estrutura condicional para classificar o veiculo pela quan-
+   // tidade de rodas.
+   se (rodas = 2) entao
+      escreva("É motorizado? [S/N]")
+      leia(motorizada)
+      se (motorizada = "s") entao
+         escreva("SEU VEICULO É: MOTO")
+      senao
+         escreva("SEU VEICULO É: BICICLETA")
+      fimse
+   fimse
+
+   se (rodas = 4) entao
+      escreva("SEU VEICULO É: CARRO")
+   senao
+      se (rodas <= 8) entao
+         escreva("SEU VEICULO É: CAMINHÃO")
+      senao
+         escreva("OPÇÃO INVALIDA.")
+      fimse
+   fimse
+fimalgoritmo
+

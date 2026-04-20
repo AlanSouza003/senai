@@ -1,0 +1,24 @@
+algoritmo "CategoriaAtleta"
+var
+   idade: inteiro
+inicio
+
+      // Lendo a idade do atleta.
+      escreva("Digite sua idade: ")
+      leia(idade)
+      
+      // Estrutura condicional para verificar a classe dos atletas.
+      se (idade < 12) entao
+         escreva("CLASSE: INFANTIL")
+      senao
+           se (idade < 18) entao
+              escreva("CLASSE: JUVENIL")
+           senao
+                se (idade < 34) entao
+                   escreva("CLASSE: ADULTA")
+                senao
+                     escreva("CLASSE: MASTER")
+                fimse
+           fimse
+      fimse
+fimalgoritmo

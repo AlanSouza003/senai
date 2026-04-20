@@ -1,0 +1,31 @@
+algoritmo "Triangulos"
+var
+   m1, m2, m3: real
+inicio
+   // Lendo a media do triângulo
+   escreva("Primeira medida: ")
+   leia(m1)
+   escreva("Segunda medida: ")
+   leia(m2)
+   escreva("Terceira medida: ")
+   leia(m3)
+
+   // Estrutura condicional para mostra se pode forma um triângulo
+   // e qual triângulo seria
+   se (m2 + m3 > m1) e (m1 + m3 > m2) e (m1 + m2 > m3) entao
+      escreval("AS MEDIDAS ACIMA,")
+      escreval("PODEM FORMAR UM TRIÂNGULO!")
+      se (m1 = m2) e (m2 = m3) e (m1 = m3) entao
+         escreva("TIPO: EQUILÁTERO")
+      senao
+         se (m1 = m2) ou (m2 = m3) ou (m3 = m1) entao
+            escreva("TIPO: ISÓSCELES")
+         senao
+            escreva("TIPO: ESCALENO")
+         fimse
+      fimse
+   senao
+      escreval("MEDIDAS INVALIDAS!")
+      escreva("NÃO PODEM FORMAR UM TRIÂNGULO!")
+   fimse
+fimalgoritmo

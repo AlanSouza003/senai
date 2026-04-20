@@ -1,0 +1,35 @@
+algoritmo "MediaAluno"
+var
+ n1, n2, m: real
+ nome: caractere
+ 
+inicio
+      // Lendo o nome do aluno
+      escreva("Digite seu nome: ")
+      leia(nome)
+      
+      // Lendo as duas primeiras notas
+      escreva("Primeira nota: ")
+      leia(n1)
+      escreva("Segunda nota: ")
+      leia(n2)
+      
+      // Calculando a média.
+      m <- (n1 + n2) / 2
+      escreval("O aluno ",nome ," teve a média: ",m)
+      // Estrutura condicional para mostra na tela se o aluno esta aprovado
+      // reprovado, recuperação ou se a nota dele foi execelente.
+      se (m < 6) entao
+         escreva("REPROVADO!")
+      senao
+           se (m < 6.9) entao
+              escreva("Esta em RECUPERAÇÃO!")
+           senao
+                se (m < 8.9) entao
+                   escreva("APROVADO!")
+                 senao
+                      escreva("Nota EXCELENTE!")
+                 fimse
+           fimse
+      fimse
+fimalgoritmo

@@ -1,0 +1,26 @@
+algoritmo "FaixaSalarial"
+var
+   sal: real
+inicio
+      // Lendo o salario do usuário
+      escreva("Digite o seu salario: R$")
+      leia(sal)
+      
+      // Mostrando o salario digitado.
+      escreval("Seu salario é de R$",sal)
+      
+      // Estrutura condicional para mostra a classificação do salario.
+      se (sal < 3000) entao
+         escreva("BAIXA RENDA!")
+      senao
+           se (sal < 8600) entao
+              escreva("CLASSE MÉDIA!")
+           senao
+                se (sal < 11200) entao
+                   escreva("CLASSE ALTA!")
+                senao
+                     escreva("ALTA RENDA!")
+                fimse
+           fimse
+      fimse
+fimalgoritmo
