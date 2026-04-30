@@ -1,0 +1,63 @@
+algoritmo "Eleicoes"
+var
+   c1, c2, c3, cand: inteiro
+   vencedor1, vencedor2, vencedor3: caractere
+
+inicio
+   // Lendo os candidatos
+   escreval("[ 1 ] BOLSONARO")
+   escreval("[ 2 ] FLAVIO BOLSONARO")
+   escreval("[ 3 ] TARCISIO DE FREITAS")
+   escreval("[ 0 ] CANCELAR")
+   escreva("Digite seu voto: ")
+   leia(cand)
+   escreval("---------------------")
+
+   // Estrutura de repetição para contagem de votos e mostrar o
+   // vencedor.
+   enquanto cand <> 0 faca
+      se (cand > 3) entao
+         escreval("Opção invalida! Tente novamente.")
+      fimse
+      se (cand = 1) entao
+         c1 <- c1 + 1
+         vencedor1 <- "BOLSONARO"
+      senao
+         se (cand = 2) entao
+            c2 <- c2 + 1
+            vencedor2 <- "FLAVIO BOLSONARO"
+         senao
+            se(cand = 3) entao
+               c3 <- c3 + 1
+               vencedor3 <- "TARCISIO DE FREITAS"
+            fimse
+         fimse
+      fimse
+      escreval("[ 1 ] BOLSONARO")
+      escreval("[ 2 ] FLAVIO BOLSONARO")
+      escreval("[ 3 ] TARCISIO DE FREITAS")
+      escreval("[ 0 ] CANCELAR")
+      escreva("Digite seu voto: ")
+      leia(cand)
+      escreval("---------------------")
+   fimenquanto
+   escreval("O Total de votos por canditado foi:")
+   escreval("BOLSONARO: ", c1," votos.")
+   escreval("FLAVIO BOLSONARO: ", c2," votos.")
+   escreval("TARCISIO DE FREITAS: ", c3," votos.")
+   escreval("---------------------")
+   // Estrutura condicional para mostrar o vencedor
+   se (c1 > c2) e (c1 > c3) entao
+      escreval("O vencedor desse eleição foi o: ", vencedor1)
+   senao
+      se (c2 > c3) e (c2 > c1) entao
+         escreval("O vencedor desse eleição foi o: ", vencedor2)
+      senao
+         se (c3 > c2) e (c3 > c1) entao
+            escreval("O vencedor desse eleição foi o: ", vencedor3)
+         senao
+            escreva("Votos empatados. Vamos para o 2º turno.")
+         fimse
+      fimse
+   fimse
+fimalgoritmo

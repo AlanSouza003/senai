@@ -1,0 +1,11 @@
+algoritmo "ContagemSalto"
+var
+   c: inteiro
+inicio
+   // Estrutura de repetição para mostrar números de 0 até 100
+   //pulando de 7 em 7
+   para c de 0 ate 100 passo 7 faca
+      escreva(c," -> ")
+   fimpara
+escreva("FIM")
+fimalgoritmo

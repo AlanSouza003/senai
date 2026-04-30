@@ -1,0 +1,19 @@
+algoritmo "SomaSerieHarmonica"
+var
+   n, i: inteiro
+   soma: real
+inicio
+   // Variáveis de controle
+   soma <- 0
+
+   escreva("Digite a quantidade de termos (N): ")
+   leia(n)
+
+   // Estrutura de repetição para calcular a soma
+   para i de 1 ate n faca
+      soma <- soma + (1 / i)
+   fimpara
+
+   // Exibição do resultado
+   escreval("A soma da série para N =", n, " é:", soma:10:5)
+fimalgoritmo

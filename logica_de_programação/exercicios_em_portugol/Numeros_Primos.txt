@@ -1,0 +1,25 @@
+algoritmo "NumerosPrimos"
+var
+   c, cont, s, n: inteiro
+inicio
+   // Variavel de controle
+   cont <- 0
+   s <- 0
+   // Lendo um valor
+   escreva("Digite um valor: ")
+   leia(n)
+
+   // Estrutura de repetição para mostrar quantos divisores tem
+   // o valor digitado e se ele é primo.
+   para c de 1 ate n faca
+      s <- n % c
+      se (s = 0) entao
+         cont <- cont + 1
+      fimse
+   fimpara
+   se (cont = 2) entao
+      escreva("O número ", n," é PRIMO.")
+   senao
+      escreva("O número ", n," é não PRIMO.")
+   fimse
+fimalgoritmo

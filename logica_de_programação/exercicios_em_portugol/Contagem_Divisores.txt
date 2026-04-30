@@ -1,0 +1,20 @@
+algoritmo "ContagemDivisores"
+var
+   c, cont, s, n: inteiro
+inicio
+   // Variavel de controle
+   cont <- 0
+   s <- 0
+   // Lendo um valor
+   escreva("Digite um valor: ")
+   leia(n)
+
+   // Estrutura de repetição para mostrar quantos divisores o valor digitado
+   para c de 1 ate n faca
+      s <- n % c
+      se (s = 0) entao
+         cont <- cont + 1
+      fimse
+   fimpara
+   escreva(cont)
+fimalgoritmo

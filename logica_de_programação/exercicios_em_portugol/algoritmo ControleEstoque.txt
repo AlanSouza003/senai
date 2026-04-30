@@ -1,0 +1,25 @@
+algoritmo "ControleEstoque"
+var
+   c: inteiro
+   preco, soma, media: real
+inicio
+   // Variavel de controle
+   c <- 0
+   preco <- 0
+   soma <- 0
+   // Estrutura de repetição para calcular todos o produtos
+   // digitados até digitar -1
+   enquanto preco <> -1 faca
+      escreva("Digite o valor do produto R$")
+      leia(preco)
+      c <- c + 1
+      soma <-  soma + preco
+      se (preco = -1) entao
+         c <- c - 1
+         soma <- soma - preco
+      fimse
+   fimenquanto
+   media <- soma / c
+   escreval("O total de itens digitados foi ", c,"")
+   escreva("E a média por entrada foi de R$",media)
+fimalgoritmo

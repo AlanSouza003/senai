@@ -1,0 +1,16 @@
+algoritmo "SimulacaoCrescimento"
+var
+   p1: real
+   cont: inteiro
+inicio
+   // Variaveis de controle
+   p1 <- 1000
+   cont <- 0
+
+   // Estrutura de repetição para calcular a quantidade de habitantes
+   enquanto (p1 <= 2000) faca
+      p1 <- p1 + (p1 * 0.05)
+      cont <- cont + 1
+   fimenquanto
+   escreva("A população chegará a 2000 pessoas em ", cont," anos.")
+fimalgoritmo

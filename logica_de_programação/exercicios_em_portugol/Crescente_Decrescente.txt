@@ -1,0 +1,29 @@
+algoritmo "CrescenteOuDecrescente"
+var
+   n1, n2, c: inteiro
+inicio
+
+   // Lendo dois valores para realização da contagem crescente
+   // ou decrescente
+   escreva("Digite um valor: ")
+   leia(n1)
+   escreva("Digite outro valor: ")
+   leia(n2)
+
+   // Variavel de controle
+   c <- n1
+
+   // Estrutura de repetição para contar os números de forma crescente
+   // ou decrescente
+
+   se (n1 < n2) entao
+      para n1 de n1 ate n2 faca
+         escreva(n1," -> ")
+      fimpara
+   senao
+      para n1 de n1 ate n2 passo -1 faca
+         escreva(n1," -> ")
+      fimpara
+   fimse
+   escreva("FIM")
+fimalgoritmo

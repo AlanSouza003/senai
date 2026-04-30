@@ -1,0 +1,18 @@
+algoritmo "IntervaloValido"
+var
+   c, n: inteiro
+inicio
+   // Variavel de controle
+   c <- 0
+   // Lendo valores
+   escreva("Digite um valor [Fora do intervalo 10 e 20]: ")
+   leia(n)
+   // Estrutura de repetição para mostrar valores na tela ate que o usuário
+   // digite 10 ou 20
+   enquanto (n < 10) ou (n > 20) faça
+      escreva("Digite um valor [Fora do intervalo 10 e 20]: ")
+      leia(n)
+      c <- c + 1
+   fimenquanto
+   escreva(c)
+fimalgoritmo

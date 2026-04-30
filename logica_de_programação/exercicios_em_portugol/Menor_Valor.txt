@@ -1,0 +1,20 @@
+algoritmo "MenorValor"
+var
+   c, n, menor: inteiro
+inicio
+   // Variavel de controle
+   menor <- 0
+   // Estrutura de repetição para mostra o menor valor digitado
+   para c de 1 ate 12 faca
+      escreva("Digite o ", c,"º valor: ")
+      leia(n)
+      se (c = 1)  entao
+         menor <- n
+      senao
+         se (n < menor) entao
+            menor <- n
+         fimse
+      fimse
+   fimpara
+   escreva(menor)
+fimalgoritmo

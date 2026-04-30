@@ -1,0 +1,23 @@
+algoritmo "MediaValidacao"
+var
+   nota, soma, media: real
+   c: inteiro
+inicio
+   // Variavel de controle
+   soma <- 0
+   c <- 0
+   // Lendo a nota do usuário.
+   escreva("Digita uma nota: ")
+   leia(nota)
+   // Estrutura de repetição para calcular a média
+   enquanto (nota >= 0) e (nota <= 10) faca
+      soma <- soma + nota
+      c <- c + 1
+      escreva("Digita uma nota: ")
+      leia(nota)
+   fimenquanto
+   se (c > 0)  entao
+      media <- soma / c
+   fimse
+   escreva(media)
+fimalgoritmo

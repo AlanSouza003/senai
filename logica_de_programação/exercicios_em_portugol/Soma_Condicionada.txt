@@ -1,0 +1,17 @@
+algoritmo "SomaCondicionada"
+var
+   c, s, n: inteiro
+inicio
+   // Variavel de Controle
+   s <- 0
+
+   // Estrutura de repetição para somar os valores acima de 10
+   para c de 1 ate 10 faca
+      escreva("Digite o ", c,"º valor: ")
+      leia(n)
+      se (n > 10) entao
+         s <- s + n
+      fimse
+   fimpara
+   escreva("A soma total dos valores digitados acima de 10 é ",s)
+fimalgoritmo

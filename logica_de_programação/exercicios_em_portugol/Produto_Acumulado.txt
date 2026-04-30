@@ -1,0 +1,14 @@
+algoritmo "ProdutoAcumulado"
+var
+   c, n, s: inteiro
+inicio
+   // Variavel de controle
+   s <- 1
+   // Estrutura de repetição para ler 5 valores
+   para c de 1 ate 5 faca
+      escreva("Digite o ", c,"º valor:")
+      leia(n)
+      s <- s * n
+   fimpara
+   escreva("O produto da soma total acima é de ", s)
+fimalgoritmo

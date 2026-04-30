@@ -1,0 +1,17 @@
+algoritmo "SomaImpares"
+var
+   c, s: inteiro
+inicio
+
+   // Variavel de controle
+   c <- 1
+   s <- 0
+   // Estrutura de repetição para somar numeros impares de 1 até 50
+   para c de 1 ate 50 faca
+      escreva(c)
+      se (c % 2 = 1) entao
+         s <- s + c
+      fimse
+   fimpara
+   escreva(s)
+fimalgoritmo

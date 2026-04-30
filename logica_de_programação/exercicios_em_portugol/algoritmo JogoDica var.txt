@@ -1,0 +1,23 @@
+algoritmo "JogoDica"
+var
+   maquina, jogador: inteiro
+inicio
+
+   // Variavel de controle
+   maquina <- 15
+   jogador <- 0
+
+   enquanto jogador <> maquina faca
+      escreva("Qual número estou pensando? ")
+      leia(jogador)
+
+      se (jogador < maquina) entao
+         escreval("maior")
+      senao
+         se (jogador > maquina) entao
+            escreval("menor")
+         fimse
+      fimse
+   fimenquanto
+   escreva("ACERTOU!")
+fimalgoritmo

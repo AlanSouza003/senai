@@ -1,0 +1,12 @@
+algoritmo "MultiplosIntervalo"
+var
+   c: inteiro
+inicio
+   // Estrutura de repetição para calcular os multiplos de 5
+   // de 1 a 200
+
+   para c de 5 ate 200 passo 5  faca
+      escreva(c," -> ")
+   fimpara
+   escreva("Fim")
+fimalgoritmo

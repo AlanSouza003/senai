@@ -1,0 +1,18 @@
+algoritmo "ContagemPersonalizada"
+var
+   n1, n2, c: inteiro
+inicio
+   // Lendo dois valores inicio e fim para realizar a contagem.
+   escreva("Digite o inicio: ")
+   leia(n1)
+   escreva("Digite o fim: ")
+   leia(n2)
+   // Variavel de controle
+   c <- n1
+   // Estrutura de repetição para realizar a contagem.
+   enquanto c <= n2 faca
+      escreva(c, " -> ")
+      c <- c + 1
+   fimenquanto
+   escreva("FIM")
+fimalgoritmo
